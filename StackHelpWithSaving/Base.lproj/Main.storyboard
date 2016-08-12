@@ -1,25 +1,121 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SQ6-CO-jfL">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StackHelpWithSaving" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7BR-CZ-UrK">
+                                <rect key="frame" x="120" y="420" width="80" height="30"/>
+                                <state key="normal" title="Load image"/>
+                                <connections>
+                                    <action selector="actionShowPicker:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mQa-o8-7fJ"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qkS-7Q-OTa">
+                                <rect key="frame" x="32" y="156" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qkS-7Q-OTa" secondAttribute="height" multiplier="1:1" id="gwt-rB-rIb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JBU-h4-lu1">
+                                <rect key="frame" x="120" y="458" width="80" height="30"/>
+                                <state key="normal" title="Forward"/>
+                                <connections>
+                                    <segue destination="NXk-oI-51p" kind="show" identifier="toSecondViewController" id="S8U-WE-nkh"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qkS-7Q-OTa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="872-Hx-FBL"/>
+                            <constraint firstItem="qkS-7Q-OTa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="BWg-HH-JRT"/>
+                            <constraint firstItem="JBU-h4-lu1" firstAttribute="width" secondItem="7BR-CZ-UrK" secondAttribute="width" id="Byz-1r-C0a"/>
+                            <constraint firstItem="7BR-CZ-UrK" firstAttribute="top" secondItem="qkS-7Q-OTa" secondAttribute="bottom" constant="8" symbolic="YES" id="F63-bx-ait"/>
+                            <constraint firstItem="7BR-CZ-UrK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HGP-SD-C40"/>
+                            <constraint firstItem="qkS-7Q-OTa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oeg-ap-NCs"/>
+                            <constraint firstItem="JBU-h4-lu1" firstAttribute="centerX" secondItem="7BR-CZ-UrK" secondAttribute="centerX" id="q3N-bi-5Ek"/>
+                            <constraint firstItem="JBU-h4-lu1" firstAttribute="top" secondItem="7BR-CZ-UrK" secondAttribute="bottom" constant="8" id="zT9-X5-het"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="CDg-Z6-wVI"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="qkS-7Q-OTa" id="8Z2-Rg-Qqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="775" y="377"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9Hm-7X-hVf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SQ6-CO-jfL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="921-QD-vGV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ZMM-bD-rHm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQB-Zq-gtN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="377"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="3aa-es-ZYL">
+            <objects>
+                <viewController id="NXk-oI-51p" customClass="SecondViewController" customModule="StackHelpWithSaving" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Vv-1N-dXh"/>
+                        <viewControllerLayoutGuide type="bottom" id="EpJ-5D-X0S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BuB-RB-tkN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="coR-pI-Tea">
+                                <rect key="frame" x="32" y="156" width="256" height="256"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="coR-pI-Tea" secondAttribute="height" multiplier="1:1" id="ZDb-FG-0MN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="coR-pI-Tea" firstAttribute="width" secondItem="BuB-RB-tkN" secondAttribute="width" multiplier="0.8" id="ULX-F9-dZA"/>
+                            <constraint firstItem="coR-pI-Tea" firstAttribute="centerY" secondItem="BuB-RB-tkN" secondAttribute="centerY" id="e8H-D1-QK0"/>
+                            <constraint firstItem="coR-pI-Tea" firstAttribute="centerX" secondItem="BuB-RB-tkN" secondAttribute="centerX" id="qao-oM-cYc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jeh-gI-aKq"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="imageView" destination="coR-pI-Tea" id="xxR-AH-73G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6z-70-hyI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1209" y="377"/>
         </scene>
     </scenes>
 </document>

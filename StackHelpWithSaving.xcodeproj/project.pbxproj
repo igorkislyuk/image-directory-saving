@@ -12,6 +12,7 @@
 		EDC4126C1D5E5E67000E8242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC4126A1D5E5E67000E8242 /* Main.storyboard */; };
 		EDC4126E1D5E5E67000E8242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC4126D1D5E5E67000E8242 /* Assets.xcassets */; };
 		EDC412711D5E5E67000E8242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC4126F1D5E5E67000E8242 /* LaunchScreen.storyboard */; };
+		EDC4127E1D5E64FB000E8242 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC4127D1D5E64FB000E8242 /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EDC4126D1D5E5E67000E8242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC412701D5E5E67000E8242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC412721D5E5E67000E8242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC4127D1D5E64FB000E8242 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,55 @@
 		EDC412651D5E5E67000E8242 /* StackHelpWithSaving */ = {
 			isa = PBXGroup;
 			children = (
-				EDC412661D5E5E67000E8242 /* AppDelegate.swift */,
-				EDC412681D5E5E67000E8242 /* ViewController.swift */,
-				EDC4126A1D5E5E67000E8242 /* Main.storyboard */,
-				EDC4126D1D5E5E67000E8242 /* Assets.xcassets */,
-				EDC4126F1D5E5E67000E8242 /* LaunchScreen.storyboard */,
-				EDC412721D5E5E67000E8242 /* Info.plist */,
+				EDC4127A1D5E6118000E8242 /* AppDelegate */,
+				EDC412781D5E6109000E8242 /* UI */,
+				EDC4127C1D5E6130000E8242 /* Support */,
 			);
 			path = StackHelpWithSaving;
+			sourceTree = "<group>";
+		};
+		EDC412781D5E6109000E8242 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				EDC4127B1D5E6122000E8242 /* Storybards */,
+				EDC412791D5E6110000E8242 /* ViewControllers */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		EDC412791D5E6110000E8242 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EDC412681D5E5E67000E8242 /* ViewController.swift */,
+				EDC4127D1D5E64FB000E8242 /* SecondViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EDC4127A1D5E6118000E8242 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				EDC412661D5E5E67000E8242 /* AppDelegate.swift */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		EDC4127B1D5E6122000E8242 /* Storybards */ = {
+			isa = PBXGroup;
+			children = (
+				EDC4126A1D5E5E67000E8242 /* Main.storyboard */,
+				EDC4126F1D5E5E67000E8242 /* LaunchScreen.storyboard */,
+			);
+			name = Storybards;
+			sourceTree = "<group>";
+		};
+		EDC4127C1D5E6130000E8242 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				EDC4126D1D5E5E67000E8242 /* Assets.xcassets */,
+				EDC412721D5E5E67000E8242 /* Info.plist */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC4127E1D5E64FB000E8242 /* SecondViewController.swift in Sources */,
 				EDC412691D5E5E67000E8242 /* ViewController.swift in Sources */,
 				EDC412671D5E5E67000E8242 /* AppDelegate.swift in Sources */,
 			);
